@@ -80,7 +80,8 @@ jobs:
         run: |
           mlflow models build-docker \
             -m "runs:/${MLFLOW_RUN_ID}/model" \
-            -n "${DOCKER_IMAGE}"
+            -n "${DOCKER_IMAGE}" \
+            --env-manager local
 
       - name: Push Docker image to Docker Hub
         run: |

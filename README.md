@@ -48,7 +48,7 @@ The workflow performs:
 2. setup Conda environment
 3. run model training using `mlflow run`
 4. upload MLflow runs, model, and training artifacts as GitHub Actions artifacts
-5. build Docker image using `mlflow models build-docker`
+5. build Docker image using `mlflow models build-docker --env-manager local`
 6. push Docker image to Docker Hub
 
 ## Required GitHub Secrets
@@ -86,5 +86,5 @@ https://hub.docker.com/r/<dockerhub_username>/natural-scene-classifier
 - `.github/workflows/ci.yml` exists.
 - `mlflow run` succeeds in GitHub Actions.
 - GitHub Actions uploads `mlflow-training-output`.
-- Docker image is built using `mlflow models build-docker`.
+- Docker image is built using `mlflow models build-docker --env-manager local`.
 - Docker image is pushed to Docker Hub.
