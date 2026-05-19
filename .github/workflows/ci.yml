@@ -38,6 +38,7 @@ jobs:
         working-directory: MLProject
         run: |
           mlflow run . -e main \
+            --experiment-name "Natural Scene Classification CI" \
             -P dataset_dir=dataset_preprocessing \
             -P epochs=2 \
             -P batch_size=16 \

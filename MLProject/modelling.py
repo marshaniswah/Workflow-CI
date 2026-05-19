@@ -123,13 +123,13 @@ def main():
     parser.add_argument("--learning-rate", type=float, default=1e-3)
     args = parser.parse_args()
 
-    mlflow.set_experiment("Natural Scene Classification CI")
     mlflow.tensorflow.autolog(log_models=True)
 
     dataset_dir = Path(args.dataset_dir)
     train_ds, val_ds, test_ds, class_names = prepare_datasets(dataset_dir, args.image_size, args.batch_size)
 
-    with mlflow.start_run(run_name="github_actions_training") as run:
+    with mlflow.start_run() as run:
+        mlflow.set_tag("mlflow.runName", "github_actions_training")
         Path("run_id.txt").write_text(run.info.run_id, encoding="utf-8")
         mlflow.log_params(
             {
