@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Local MLflow/training outputs generated during tests
+MLProject/mlruns/
+MLProject/training_artifacts/
+MLProject/model.keras
+MLProject/run_id.txt
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/

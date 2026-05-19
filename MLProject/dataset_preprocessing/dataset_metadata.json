@@ -1,0 +1,31 @@
+{
+  "project": "Natural Scene Classification with MLflow Monitoring Pipeline",
+  "class_names": [
+    "buildings",
+    "forest",
+    "glacier",
+    "mountain",
+    "sea",
+    "street"
+  ],
+  "total_images": 6000,
+  "split_counts": {
+    "train": 4199,
+    "val": 901,
+    "test": 900
+  },
+  "preprocessing": {
+    "raw_dir": "../dataset_raw",
+    "output_dir": "dataset_preprocessing",
+    "image_size": 224,
+    "test_size": 0.15,
+    "val_size": 0.15,
+    "random_state": 42
+  },
+  "notes": [
+    "Images are converted to RGB.",
+    "EXIF orientation is respected.",
+    "Images are center-cropped/resized to a square.",
+    "Pixel normalization is performed during model training using MobileNetV2 preprocessing."
+  ]
+}
