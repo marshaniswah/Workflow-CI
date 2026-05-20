@@ -1,7 +1,5 @@
 Docker Hub Image URL:
-https://hub.docker.com/r/<dockerhub_username>/natural-scene-classifier
+https://hub.docker.com/r/marshaniswah/natural-scene-classifier
 
 Image name used by GitHub Actions:
-<dockerhub_username>/natural-scene-classifier:latest
-
-Replace <dockerhub_username> after the first successful Advanced CI run.
+marshaniswah/natural-scene-classifier:latest
